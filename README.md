@@ -30,5 +30,5 @@ You need a browser extension that allows you to inject custom CSS styles into we
 ### Step 4. Verify the Changes
 Open or refresh the [google.com](https://google.com) homepage. The new logos and styling should now be active!
 
-![Preview 1](./imege1.png)
+![Preview 1](./image1.png)
 ![Preview 2](./image2.png)
