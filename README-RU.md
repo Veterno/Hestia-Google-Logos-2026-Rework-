@@ -30,6 +30,6 @@ Original by **BiggestHestiaFan**: [userstyles.org/styles/273752/hestia-google-lo
 ### Шаг 4. Проверка
 Откройте или обновите главную страницу [google.com](https://google.com). Изменения и новые логотипы должны сразу примениться!
 
-![Превью 1](image2.png)
-![Превью 2](imege2.png)
+![Превью 1](./image1.png)
+![Превью 2](./image2.png)
 
