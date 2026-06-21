@@ -1,82 +1,87 @@
-/* =========================================================
-   FDF Google Style — Хестия (анимированный логотип + фон)
-   Автор: ваш ник
-   Версия: 1.0 (адаптировано под 2026 год)
-   ========================================================= */
+/* ==UserStyle==
+@name           Hestia Google 2026 Rework
+@namespace      ://github.com
+@version        1.1.0
+@description    FDF Стиль Google — Hestia (Анимированный логотип + Фон)
+@author         Aleks
+@license        No License
+==/UserStyle== */
 
-/* -------------------- НАСТРОЙКИ КАРТИНКИ -------------------- */
-/* Чтобы сменить изображение, меняйте URL только в одной переменной ниже */
-:root {
-  --fdf-image: url("https://userstyles.org/style_screenshots/146217_after.gif?r=1707552071");
-}
+@-moz-document domain("google.com") {
+  /* -------------------- НАСТРОЙКИ КАРТИНКИ -------------------- */
+  /* Чтобы сменить изображение, меняйте URL только в одной переменной ниже */
+  :root {
+    --fdf-image: url("https://userstyles.org/style_screenshots/146217_after.gif?r=1707552071");
+  }
 
-/* -------------------- УДАЛЕНИЕ ЛИШНИХ КНОПОК -------------------- */
-/* Скрываем ненужные элементы интерфейса Google */
-.o3j99.n1xJcf.Ne6nSd,
-.FPdoLc.lJ9FBc,
-.o3j99.c93Gbe {
-  display: none !important;
-}
+  /* -------------------- УДАЛЕНИЕ ЛИШНИХ КНОПОК -------------------- */
+  /* Скрываем ненужные элементы интерфейса Google */
+  .o3j99.n1xJcf.Ne6nSd,
+  .FPdoLc.lJ9FBc,
+  .o3j99.c93Gbe {
+    display: none !important;
+  }
 
-/* -------------------- УБИРАЕМ ТЕКСТ "Images" НА ГЛАВНОЙ -------------------- */
-#gws-output-pages-elements-homepage_additional_languages__als,
-#hplogo {
-  text-indent: -9000px !important;
-  white-space: nowrap !important;
-}
+  /* -------------------- УБИРАЕМ ТЕКСТ "Images" НА ГЛАВНОЙ -------------------- */
+  #gws-output-pages-elements-homepage_additional_languages__als,
+  #hplogo {
+    text-indent: -9000px !important;
+    white-space: nowrap !important;
+  }
 
-/* -------------------- ФОН В ПРАВОМ НИЖНЕМ УГЛУ (на странице результатов) -------------------- */
-.main {
-  background: var(--fdf-image) 90% 90% no-repeat !important;
-  background-attachment: fixed !important;
-  /* Если хотите поднять выше — меняйте второе значение (90% → 85% и т.д.) */
-}
+  /* -------------------- ФОН В ПРАВОМ НИЖНЕМ УГЛУ (на странице результатов) -------------------- */
+  .main {
+    background: var(--fdf-image) 90% 90% no-repeat !important;
+    background-attachment: fixed !important;
+    /* Если хотите поднять выше — меняйте второе значение (90% → 85% и т.д.) */
+  }
 
-/* -------------------- ЛОГОТИП НА ГЛАВНОЙ СТРАНИЦЕ (большой баннер) -------------------- */
-/* Этот блок отвечает за замену стандартного логотипа на главной странице */
-.o3j99.LLD4me.LS8OJ {
-  box-sizing: border-box !important;
-  background: var(--fdf-image) center no-repeat !important;
-  bottom: -60px !important;
-  z-index: -999 !important;
-  position: relative !important;
-  padding-bottom: 350px !important;
-  width: 999px !important;
-  margin: auto !important;
-}
+  /* -------------------- ЛОГОТИП НА ГЛАВНОЙ СТРАНИЦЕ (большой баннер) -------------------- */
+  /* Этот блок отвечает за замену стандартного логотипа на главной странице */
+  .o3j99.LLD4me.LS8OJ {
+    box-sizing: border-box !important;
+    background: var(--fdf-image) center no-repeat !important;
+    bottom: -60px !important;
+    z-index: -999 !important;
+    position: relative !important;
+    padding-bottom: 350px !important;
+    width: 999px !important;
+    margin: auto !important;
+  }
 
-/* -------------------- ЛОГОТИП НА ВСЕХ СТРАНИЦАХ (замена через псевдоэлементы) -------------------- */
-/* Прячем оригинальные картинки логотипа */
-[aria-label="Google"] img,
-#logo img,
-.lnXdpd img,
-#hplogo img,
-img[alt="Google"] {
-  display: none !important;
-}
+  /* -------------------- ЛОГОТИП НА ВСЕХ СТРАНИЦАХ (замена через псевдоэлементы) -------------------- */
+  /* Прячем оригинальные картинки логотипа */
+  [aria-label="Google"] img,
+  #logo img,
+  .lnXdpd img,
+  #hplogo img,
+  img[alt="Google"] {
+    display: none !important;
+  }
 
-/* Очищаем фон контейнеров логотипа */
-[aria-label="Google"],
-#logo,
-.lnXdpd,
-#hplogo {
-  position: relative !important;
-  background: none !important;
-}
+  /* Очищаем фон контейнеров логотипа */
+  [aria-label="Google"],
+  #logo,
+  .lnXdpd,
+  #hplogo {
+    position: relative !important;
+    background: none !important;
+  }
 
-/* Вставляем свой логотип через псевдоэлемент ::before */
-[aria-label="Google"]::before,
-#logo::before,
-.lnXdpd::before,
-#hplogo::before {
-  content: "" !important;
-  display: block !important;
-  width: 300px !important;   /* ← подберите под свою картинку */
-  height: 100px !important;  /* ← подберите под свою картинку */
-  background: var(--fdf-image) center / contain no-repeat !important;
-  margin: 0 auto !important;
-  position: absolute !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
+  /* Вставляем свой логотип через псевдоэлемент ::before */
+  [aria-label="Google"]::before,
+  #logo::before,
+  .lnXdpd::before,
+  #hplogo::before {
+    content: "" !important;
+    display: block !important;
+    width: 300px !important;   
+    height: 100px !important;  
+    background: var(--fdf-image) center / contain no-repeat !important;
+    margin: 0 auto !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
 }
